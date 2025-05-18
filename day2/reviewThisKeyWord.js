@@ -4,6 +4,9 @@ const Concho={
     weight: '30',
     sua(){
         console.log('gau gau')
+    },
+    can(){
+        console.log('gru grugru')
     }
 }
 
@@ -12,3 +15,4 @@ this.name=name
 this.color=color
 }
 console.log(Concho.sua())
+console.log(Concho.can())
