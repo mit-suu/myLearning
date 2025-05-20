@@ -1,2 +1,1 @@
-#This is my learning 
-#HTML CSS JS
+#This is my learning about HTML, CSS, JS, ReactJS, NodeJS
