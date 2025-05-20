@@ -62,3 +62,6 @@ console.log(totalPrice)
 var finalSum = courses.reduce((a,b)=>a+b.price,0);
 console.log(finalSum)
 
+var numbers = [100,200,300,400]
+var totalNumber = numbers.reduce((a,b)=>a+b,0)
+console.log(totalNumber)
