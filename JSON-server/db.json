@@ -1,0 +1,14 @@
+{
+  "courses": [
+    {
+      "id": "C001",
+      "title": "Lập trình Java cơ bản",
+      "description": "Khóa học giúp bạn nắm vững các kiến thức cơ bản về Java, từ cú pháp đến lập trình hướng đối tượng."
+    },
+    {
+      "id": "C002",
+      "title": "Thiết kế Web với HTML/CSS",
+      "description": "Tìm hiểu cách tạo giao diện web bằng HTML và CSS, phù hợp cho người mới bắt đầu."
+    }
+  ]
+}
