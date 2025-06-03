@@ -2,28 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>React Without Build Tools</title>
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-
+    <title>React With Babel</title>
+    <!-- React và ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-    <script>
-        const ulReact = React.createElement(
-            'ul',
-            null,
-            React.createElement('li',null,'JavaScript'),
-            React.createElement('li',null,'JavaScript'),
-        )
-        console.log(ulReact)
-        const divReact = React.createElement(
-        'div',
+    <div id="root"></div>
+
+    <!-- Script dùng Babel để viết JSX -->
+    <script type="text/babel">
+      const course =[
         {
-            className: 'post-item'
-        },React.createElement('h2',{title:'Hoc react tai f8'},'Hoc react JS'),
-        React.createElement('p',null,'Hoc react co ban den nang cao')
+          name: 'html'
+        },{
+          name: 'css'
+        },{
+          name: 'js'
+        }
+      ]
+      const ul=<ul>
+
+        {
+          course.map(course =>
+            <li>{course.name}</li>
         )
+        }
+        </ul>;
+        ReactDOM.render(ul,document.getElementById('root'))
     </script>
   </body>
 </html>
