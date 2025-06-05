@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React With Babel</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function List({ data, children }) {
+        return (
+          <div>
+            <ul>{data.map((item) => children(item))}</ul>
+          </div>
+        );
+      }
+
+      const cars = ["BMW", "Honda", "Mazda"];
+      //app.js
+      function App() {
+        return (
+          <div id="wrapper">
+            <List data={cars}>{(item) => <li key={item}>{item}</li>}</List>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
